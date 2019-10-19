@@ -10,9 +10,9 @@ The game is played on a 9x3 board. At the top are 4 outputs for the secret code,
 
 |   | * |   | * |   | * |   | * |   |
 |---|---|---|---|---|---|---|---|---|
-|   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |
-|   |   |   |   |   |   |   |   |   |
+|   | & |   |   |   |   |   |   |   |
+|   |   |   |\| |   |   |   |   |   |
+|   |   |   |   |   | ^ |   |   |   |
 | 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 |
 
 ### Start of the game
