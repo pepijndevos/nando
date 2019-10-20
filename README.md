@@ -6,37 +6,34 @@ A strategy puzzle game about binary logic. In Nando, players compete to construc
 
 All dimensions, numbers, and rules are under development and subject to change based on feedback from playtesting.
 
-The game is played on a 9x3 board. At the top are 4 outputs for the secret code, at the bottom are 9 switches to drive the logic circuit.
+The game is played on a staggered grid as shown below. At the top are 4 outputs for the secret code, at the bottom are 12 switches to drive the logic circuit.
 
-|   | * |   | * |   | * |   | * |   |
-|---|---|---|---|---|---|---|---|---|
-|   | & |   |   |   |   |   |   |   |
-|   |   |   |\| |   |   |   |   |   |
-|   |   |   |   |   | ^ |   |   |   |
-| 1 | 0 | 1 | 0 | 1 | 0 | 1 | 0 | 1 |
+```
+     *   *   *   *
+    |   |   |   |   |
+  |   |   |   |   |   |
+|   |   |   |   |   |   |
+ * * * * * * * * * * * *
+```
 
 ### Start of the game
 
-Put 9 bit tokens in a random pattern along the bottom of the board.
-Each player draws a 4 bit secret code and 4 logic tiles into their hand.
+Put 12 bit tokens in a random pattern along the bottom of the board.
+Each player draws a 4 bit secret code.
 
 ### A turn
 
-A player can do one of the following things.
+A player can do two things:
 
-* Place a logic tile from their hand on the board in such a way that it connects to an open output wire. Draw a card.
-* Replace an existing tile with one from their hand, discarding the old tile. Draw a card.
-* Discard one tile from their hand and draw a new card.
-* Discard a card to flip a switch at the bottom of the board. They play the remainder of the game with one card less.
+The player draws a tile and places it on the board in a position that is fully connected to other tiles or the bottom edge of the board.
 
-If a logic loop is created, one tile in the loop chosen by the player is "burned" and removed form the board.
-
-At the end of a turn, update the bit tokens on all tiles to reflect their state. A tile with an open input does not have an output. Only tiles with all of their inputs driven by another active output have an output themselves.
+The player flips one bit at the bottom of the board and updates all connected tiles. It is not allowed to flip this bit back for one round.
 
 ### End of the game
 
 A player wins the game by driving all outputs at the top of the board to match the secret code on their card.
 
+When a tile with two different outputs connects to the top, the left output counts.
 
 ## Building the game
 
