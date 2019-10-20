@@ -1,3 +1,5 @@
+![photo of the board](resources/demo.jpg)
+
 # Nando
 
 A strategy puzzle game about binary logic. In Nando, players compete to construct their secret code by placing logic tiles on a grid.
